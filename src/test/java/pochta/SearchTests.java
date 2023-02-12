@@ -1,5 +1,6 @@
 package pochta;
 
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
@@ -14,6 +15,7 @@ public class SearchTests extends TestBase{
             "80520775364115"
     })
     @ParameterizedTest(name = "Отслеживается трек-номер {0}")
+    @Tag("Jenkins")
     void pochtaSearchTest(String trackNumber) {
         step("Открыть сайт Почта России", () -> {
             pochtaPage.openPage();

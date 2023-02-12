@@ -8,4 +8,9 @@ public class PochtaPage {
         open("/");
         return this;
     }
+
+    public PochtaPage openDeliveryPage(){
+        open("/parcels");
+        return this;
+    }
 }
